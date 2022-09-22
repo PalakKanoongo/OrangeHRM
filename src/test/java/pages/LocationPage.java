@@ -55,6 +55,7 @@ public class LocationPage {
 	         if( opt.get(j).getText().equals(chosen)){
 	            opt.get(j).click();
 	            break;
+	            
 	         }
 	      }
 	}
