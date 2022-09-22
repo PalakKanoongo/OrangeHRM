@@ -16,9 +16,8 @@ public class LocationPage {
 	By city=By.cssSelector("#city");
 	By phone=By.cssSelector("#phone");
 	By zip=By.cssSelector("#zipCode");
-	//By country= By.xpath("//ul[@id=\"select-options-1c2dcabc-1690-38cc-9f07-3c91dcac4c80\"]//li//span");
-	@FindBy(xpath="//ul[@id=\\\"select-options-1c2dcabc-1690-38cc-9f07-3c91dcac4c80\\\"]//li//span")
-	By country;
+	By country= By.xpath("//ul[@id=\"select-options-844b3be1-6133-f984-6765-7371cc517eca\"]");
+	By save= By.xpath("//*[@id=\"locationAddModal\"]/form/div[2]/a[1]");
 	public LocationPage(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -31,16 +30,24 @@ public class LocationPage {
 		driver.findElement(phone).sendKeys("3452341120");
 		driver.findElement(zip).sendKeys("001221");
 		System.out.println("waiting for country");
-		dropDown(country,"Germany");
+		Thread.sleep(4000);
+		
+		dropDown("Germany");
+		Thread.sleep(3000);;
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElement(save).click();
 		System.out.println("end");
 
 	}
 	
-	public void dropDown(By element, String chosen ) {
-		List<WebElement> opt = driver.findElements( element);
+	public void dropDown( String chosen ) {
+		List<WebElement> opt = driver.findElements(By.xpath("//ul[@id=\"select-options-844b3be1-6133-f984-6765-7371cc517eca\"]").tagName("li") );
+		
+		System.out.println(opt.size());
+		//List<WebElement> opt = driver.findElements( element);
 		System.out.println("entered");
 		System.out.println(opt.size());
+		driver.findElement(By.xpath("//*[@id=\"countryCode_inputfileddiv\"]/div/input")).click();
 	      // Iterating through the list selecting the desired option
 	      for( int j = 0; j< opt.size();j++){
 	    	  System.out.println(opt.get(j).getText());
@@ -52,4 +59,6 @@ public class LocationPage {
 	      }
 	}
 }
+	
+
 

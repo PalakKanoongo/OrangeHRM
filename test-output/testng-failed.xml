@@ -6,8 +6,8 @@
       <class name="testcases.locationTestCase">
         <methods>
           <include name="close"/>
-          <include name="location"/>
           <include name="setUp"/>
+          <include name="location"/>
         </methods>
       </class> <!-- testcases.locationTestCase -->
     </classes>
