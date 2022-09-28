@@ -5,8 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,7 +34,7 @@ public class baseTest {
 	public static Properties prop;
 	public static  ExtentSparkReporter spark ;
 	public static  ExtentReports extent ;
-	 public static ExtentTest test;
+	public static ExtentTest test;
 	
 	
 	@BeforeTest
@@ -82,13 +80,12 @@ public class baseTest {
 }
 	
 	
-	@AfterClass
-	public void close() {
-		driver.close();
-	}
+//	@AfterClass
+//	public void close() {
+//		driver.close();
+//	}
 
 	public void verifyCurrentUrl(String url) {
-		// TODO Auto-generated method stub
 		if(!url.equals(driver.getCurrentUrl())){
 			test.log(Status.FAIL,"Current URL:"
 					+ driver.getCurrentUrl()+ " Expected URL: " + url);
@@ -106,6 +103,11 @@ public class baseTest {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(element));
         driver.findElement(element).click();
+    }
+	
+	public void waitTillClickable(By element){
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }

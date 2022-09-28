@@ -24,11 +24,9 @@ public class locationTestCase extends baseTest {
 	    test.log(Status.INFO, "Create Location with "+ City+" , "+Country+" ");
 		objDashboard=new dashboardPage(driver);
 		objDashboard.searchAndClick();
-		
-		super.verifyCurrentUrl(prop.getProperty("LocationUrl"));
-	 
 		objLocation=new LocationPage(driver);
 		try {
+		super.verifyCurrentUrl(prop.getProperty("LocationUrl"));
 		objLocation.Details(office,City,Phone,Zip,Country,Province);
 		test.log(Status.PASS , "New Office: "+ office+ "added successfully. ");
 		}catch(Exception e) {
@@ -36,12 +34,19 @@ public class locationTestCase extends baseTest {
             Assert.fail("Adding New office failed");
 		}
 		
+		try {
+		objLocation.verifyLocationTest(office, City, Phone, Zip, Country);
+		test.log(Status.PASS , "Location successfully Verified");
+		}catch(Exception e) {
+			test.log(Status.FAIL , "Failed to verify location");
+			Assert.fail("Could not add location");
+		}
+		
 	}	
 	@DataProvider
 	public Object[][] testData() {
 		return new Object[][] { 
-			    { "New York111","New York","8464876121","100001","United States","Alaska"},
-			    {"Alaska Office","Alaska","8464876121","100001","United States","Alaska"}
+			    { "New York0222","New York","8464876121","100001","United States","Alaska"},
 				 };
 	}
   

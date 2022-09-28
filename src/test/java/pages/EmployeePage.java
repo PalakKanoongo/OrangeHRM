@@ -1,16 +1,9 @@
 package pages;
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 
 import testcases.baseTest;
 
@@ -55,7 +48,6 @@ public class EmployeePage extends baseTest{
 		driver.findElement(location).click();
 		Thread.sleep(2000);
 		driver.findElement(By.linkText(office)).click();
-		//Thread.sleep(2000);
 	}
   
 //Clear default filters from the page

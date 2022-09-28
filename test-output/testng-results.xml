@@ -1,118 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-09-28T17:31:12 IST" name="Default suite" finished-at="2022-09-28T17:32:23 IST" duration-ms="70629">
+  <suite started-at="2022-09-28T22:59:30 IST" name="Default suite" finished-at="2022-09-28T23:00:25 IST" duration-ms="55142">
     <groups>
     </groups>
-    <test started-at="2022-09-28T17:31:12 IST" name="Default test" finished-at="2022-09-28T17:32:23 IST" duration-ms="70629">
-      <class name="testcases.EmployeeTestCase">
-        <test-method is-config="true" signature="before()[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:31:12 IST" name="before" finished-at="2022-09-28T17:31:13 IST" duration-ms="274" status="PASS">
+    <test started-at="2022-09-28T22:59:30 IST" name="Default test" finished-at="2022-09-28T23:00:25 IST" duration-ms="55142">
+      <class name="testcases.locationTestCase">
+        <test-method is-config="true" signature="before()[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T22:59:30 IST" name="before" finished-at="2022-09-28T22:59:30 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:31:13 IST" name="setUp" finished-at="2022-09-28T17:31:31 IST" duration-ms="18871" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T22:59:30 IST" name="setUp" finished-at="2022-09-28T22:59:55 IST" duration-ms="25601" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:31:31 IST" name="beforeMethod" finished-at="2022-09-28T17:31:31 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T22:59:55 IST" name="beforeMethod" finished-at="2022-09-28T22:59:55 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.EmployeeTestCase.employee(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+                <![CDATA[public void testcases.locationTestCase.location(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="employee(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:31:31 IST" name="employee" data-provider="testData" finished-at="2022-09-28T17:31:58 IST" duration-ms="26678" status="PASS">
+        <test-method signature="location(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T22:59:55 IST" name="location" data-provider="testData" finished-at="2022-09-28T23:00:24 IST" duration-ms="28518" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Priyaaa]]>
+                <![CDATA[New York0222]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Rama]]>
+                <![CDATA[New York]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[2022-09-29]]>
+                <![CDATA[8464876121]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[India Office]]>
+                <![CDATA[100001]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Alaska]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- employee -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:31:58 IST" name="beforeMethod" finished-at="2022-09-28T17:31:58 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- location -->
+        <test-method signature="location(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T23:00:24 IST" name="location" data-provider="testData" finished-at="2022-09-28T23:00:24 IST" duration-ms="415" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.EmployeeTestCase.employee(java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="employee(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:31:58 IST" name="employee" data-provider="testData" finished-at="2022-09-28T17:32:21 IST" duration-ms="23186" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sammy]]>
+                <![CDATA[Alaska Office11]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Rama]]>
+                <![CDATA[Alaska]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[2022-09-29]]>
+                <![CDATA[8464876121]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[Germany Office]]>
+                <![CDATA[100001]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[United States]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Alaska]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertTrue(Assert.java:56)
+at org.testng.Assert.assertTrue(Assert.java:66)
+at testcases.baseTest.verifyCurrentUrl(baseTest.java:92)
+at testcases.locationTestCase.location(locationTestCase.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- employee -->
-        <test-method signature="clearFiltersTest()[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:32:21 IST" name="clearFiltersTest" finished-at="2022-09-28T17:32:22 IST" depends-on-methods="testcases.EmployeeTestCase.employee" duration-ms="623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clearFiltersTest -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:32:21 IST" name="beforeMethod" finished-at="2022-09-28T17:32:21 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- location -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T23:00:24 IST" name="beforeMethod" finished-at="2022-09-28T23:00:24 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.EmployeeTestCase.clearFiltersTest()]]>
+                <![CDATA[public void testcases.locationTestCase.location(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:32:22 IST" name="close" finished-at="2022-09-28T17:32:22 IST" duration-ms="494" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="after()[pri:0, instance:testcases.EmployeeTestCase@413d1baf]" started-at="2022-09-28T17:32:22 IST" name="after" finished-at="2022-09-28T17:32:23 IST" duration-ms="413" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:testcases.locationTestCase@2cb4893b]" started-at="2022-09-28T23:00:24 IST" name="after" finished-at="2022-09-28T23:00:25 IST" duration-ms="343" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-      </class> <!-- testcases.EmployeeTestCase -->
+      </class> <!-- testcases.locationTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

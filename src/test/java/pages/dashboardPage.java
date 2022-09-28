@@ -1,15 +1,8 @@
 package pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import com.aventstack.extentreports.Status;
-
 import testcases.baseTest;
-
-
 
 public class dashboardPage extends baseTest {
 	WebDriver driver;
@@ -31,8 +24,6 @@ public class dashboardPage extends baseTest {
 	
 	public EmployeePage forEmp() throws InterruptedException {
 		waitAndClick(emp);
-		//driver.findElement(emp).click();
-		//Thread.sleep(4000);
 		return new EmployeePage(driver);
 	}
 }

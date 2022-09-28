@@ -1,17 +1,10 @@
 package testcases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 
 import pages.EmployeePage;
 import pages.dashboardPage;
@@ -64,8 +57,8 @@ public class EmployeeTestCase extends baseTest {
 @DataProvider
 public Object[][] testData(){
     return new Object[][] {
-            {"Priyaaa" , "Rama" , "2022-09-29","India Office"},
-            {"Sammy" , "Rama" , "2022-09-29","Germany Office"}
+            {"Priyaaa1" , "Raama" , "2022-09-29","India Office"},
+            {"Sammmmy" , "Raama" , "2022-09-29","Germany Office"}
     };
 }
 }

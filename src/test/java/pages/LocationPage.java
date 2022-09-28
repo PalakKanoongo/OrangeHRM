@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+import com.aventstack.extentreports.Status;
 
 import testcases.baseTest;
 
@@ -22,6 +25,7 @@ public class LocationPage extends baseTest {
 	String country="//*[@id=\"countryCode_inputfileddiv\"]/div/input";
 	String province="//*[@id=\"state_inputfileddiv\"]/div/input";
 	By save= By.xpath("//*[@id=\"locationAddModal\"]/form/div[2]/a[1]");
+	By tableElement = By.xpath("//*[@id=\"locationDiv\"]/crud-panel/div/div/list/table");
 	public LocationPage(WebDriver driver) {
 		this.driver=driver;
 	}
@@ -54,10 +58,27 @@ public class LocationPage extends baseTest {
 	         // if the option is By Subject click that option
 	         if( opt.get(j).getText().equals(chosen)){
 	            opt.get(j).click();
-	            break;
-	            
+	            break; 
 	         }
 	      }
+	}
+	
+	public boolean verifyLocationTest(String office , String city , String phone , String zip , String country){
+
+		driver.get(prop.getProperty("LocationUrl"));
+		test.log(Status.INFO , "Details : " + office + " " + zip + " " + city + " " + phone + " " + country);
+
+		waitTillClickable(tableElement);
+		WebElement table = driver.findElement(tableElement);
+		List<WebElement> rows = table.findElements(By.tagName("span"));
+
+		for(WebElement elem : rows){
+			if(elem.getText().toString().equals(office)){
+				
+				return true;
+			}
+		}
+		return false;
 	}
 }
 	
