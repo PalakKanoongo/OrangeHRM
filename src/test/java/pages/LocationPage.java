@@ -3,12 +3,13 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy; 
+import org.openqa.selenium.support.FindBy;
 
+import testcases.baseTest;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-public class LocationPage {
+public class LocationPage extends baseTest {
   
 	WebDriver driver;
 	By addBtn= By.xpath("//i[@class=\"material-icons\"][text()=\"add\"]");
@@ -16,41 +17,40 @@ public class LocationPage {
 	By city=By.cssSelector("#city");
 	By phone=By.cssSelector("#phone");
 	By zip=By.cssSelector("#zipCode");
-	By country= By.xpath("//ul[@id=\"select-options-844b3be1-6133-f984-6765-7371cc517eca\"]");
+	String countryList="//ul[@id=\"select-options-844b3be1-6133-f984-6765-7371cc517eca\"]";
+	String provinceList="//*[@id=\"select-options-9681f5e0-53dd-8ab9-a254-271ad6868ea2";
+	String country="//*[@id=\"countryCode_inputfileddiv\"]/div/input";
+	String province="//*[@id=\"state_inputfileddiv\"]/div/input";
 	By save= By.xpath("//*[@id=\"locationAddModal\"]/form/div[2]/a[1]");
 	public LocationPage(WebDriver driver) {
 		this.driver=driver;
 	}
 	
-	public void Details() throws InterruptedException {
-		driver.findElement(addBtn).click();
-		driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-		driver.findElement(name).sendKeys("Germany Office");
-		driver.findElement(city).sendKeys("Berlin");
-		driver.findElement(phone).sendKeys("3452341120");
-		driver.findElement(zip).sendKeys("001221");
-		System.out.println("waiting for country");
-		Thread.sleep(4000);
+	public void Details(String NAME, String CITY,String PHONE, String ZIP, String COUNTRY,String Province) throws InterruptedException {
+		waitAndClick(addBtn);
+		waitAndClick(name);
+		driver.findElement(name).sendKeys(NAME);
+		driver.findElement(city).sendKeys(CITY);
+		driver.findElement(phone).sendKeys(PHONE);
+		driver.findElement(zip).sendKeys(ZIP);
 		
-		dropDown("Germany");
-		Thread.sleep(3000);;
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		dropDown(countryList,country, COUNTRY);
+		dropDown(provinceList,province,Province);
 		driver.findElement(save).click();
-		System.out.println("end");
-
+		driver.navigate().to("https://sanjay29-trials76.orangehrmlive.com/client/#/dashboard");
+		Thread.sleep(2000);
 	}
 	
-	public void dropDown( String chosen ) {
-		List<WebElement> opt = driver.findElements(By.xpath("//ul[@id=\"select-options-844b3be1-6133-f984-6765-7371cc517eca\"]").tagName("li") );
+	public void dropDown(String itemList,String input, String chosen ) {
+		List<WebElement> opt = driver.findElements(By.xpath(itemList).tagName("li") );
 		
 		System.out.println(opt.size());
-		//List<WebElement> opt = driver.findElements( element);
 		System.out.println("entered");
 		System.out.println(opt.size());
-		driver.findElement(By.xpath("//*[@id=\"countryCode_inputfileddiv\"]/div/input")).click();
+		driver.findElement(By.xpath(input)).click();
 	      // Iterating through the list selecting the desired option
 	      for( int j = 0; j< opt.size();j++){
-	    	  System.out.println(opt.get(j).getText());
+	    	 // System.out.println(opt.get(j).getText());
 	         // if the option is By Subject click that option
 	         if( opt.get(j).getText().equals(chosen)){
 	            opt.get(j).click();

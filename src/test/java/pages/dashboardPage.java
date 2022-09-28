@@ -5,19 +5,34 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class dashboardPage {
+import com.aventstack.extentreports.Status;
+
+import testcases.baseTest;
+
+
+
+public class dashboardPage extends baseTest {
 	WebDriver driver;
 	By search= By.xpath("//input[@id=\"menuQuickSearch_menuQuickSearch\"]");
 	By searchText= By.xpath("//div[@class=\"menu-title\"][text()=\"Locations\"]");
+	By emp=By.xpath("//a[text()=\"Employee List \"]");
 	
 	public dashboardPage(WebDriver driver) {
 		this.driver=driver;
 	}
 	
+	//function for location
 	public void searchAndClick() throws InterruptedException {
+		waitAndClick(search);
 		driver.findElement(search).sendKeys("Locations");
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.findElement(searchText).click();
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		waitAndClick(searchText);
+		
+	}
+	
+	public EmployeePage forEmp() throws InterruptedException {
+		waitAndClick(emp);
+		//driver.findElement(emp).click();
+		//Thread.sleep(4000);
+		return new EmployeePage(driver);
 	}
 }
